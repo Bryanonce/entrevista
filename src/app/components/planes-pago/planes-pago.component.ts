@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PlanesPagoComponent implements OnInit {
 
   @Input()
-  data !: any[];
+  data : any[] = [];
 
   constructor() { }
 

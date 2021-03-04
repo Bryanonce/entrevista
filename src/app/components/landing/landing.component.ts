@@ -29,6 +29,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     }).subscribe((response:any)=>{
       if(response.mensajeRetorno === 'Consulta Ok'){
         this.data = response.data;
+        console.log(this.data);
       }
     })
 
