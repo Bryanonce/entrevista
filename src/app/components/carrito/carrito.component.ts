@@ -8,16 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class CarritoComponent implements OnInit {
 
   public data:any[] = [];
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
     if(localStorage.getItem('compras')){
       this.data = JSON.parse(localStorage.getItem('compras') || '{}');
+      console.log(this.data)
     }
   }
 
-  quitarCarrito(id:number){
-    this.data = this.data.filter(d=>d.id !== id)
+  quitarCarrito(index:number){
+    console.log(index)
+    console.log(this.data)
+    this.data.splice(index,1);
     localStorage.setItem('compras',JSON.stringify(this.data))
   }
 

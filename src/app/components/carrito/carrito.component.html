@@ -10,7 +10,7 @@
                     <h5 class="card-title">{{producto.descripcion}}</h5>
                     <p class="card-text">{{producto.detalle}}</p>
                     <p>Precio: {{producto.precio | currency}}</p>
-                    <button (click)="quitarCarrito(producto.id)" class="btn btn-danger w-100">Quitar del Carrito</button>
+                    <button (click)="quitarCarrito(index)" class="btn btn-danger w-100">Quitar del Carrito</button>
                 </div>
             </div>
         </div>
