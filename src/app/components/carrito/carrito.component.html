@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<div class="card-container">
+    <img *ngIf="data && data.length === 0" src="https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="Loading">
+    <div *ngIf="data.length !== 0" class="mt-3 p-5">
+        <div *ngFor="let producto of data;let index = index" class="col-md-12">
+            <div class="d-flex align-items-center">
+                <img src="assets/seco-terno2.png" class=" card-img-left row col-md-6" alt="...">
+                <div class="card-body row col-md-6">
+                    <h5 class="card-title">{{producto.descripcion}}</h5>
+                    <p class="card-text">{{producto.detalle}}</p>
+                    <p>Precio: {{producto.precio | currency}}</p>
+                    <button (click)="quitarCarrito(producto.id)" class="btn btn-danger w-100">Quitar del Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-total-pago-panel [data]="data"></app-total-pago-panel>

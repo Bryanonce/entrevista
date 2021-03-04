@@ -1,0 +1,12 @@
+.planes{
+    display: flex;
+    flex-direction: column;
+}
+
+.planes *{
+    margin: 10px 0;
+}
+
+.red{
+    color: red;
+}

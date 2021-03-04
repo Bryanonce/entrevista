@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'entrevista-app';
+
+  public isLoged:boolean = false;
+
+  isLogin(event:any){
+    this.isLoged = true;
+    console.log(event)
+  }
 }

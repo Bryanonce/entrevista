@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<app-planes-pago></app-planes-pago>
+
+<div class="container-pasarela p-5 mt-3">
+    <p>Total a Pagar: {{totalPago}}</p>
+    <div class="planes">
+        <select (change)="cambiarMontoPlan($event)" class="form-select w-100" aria-label="Default select example">
+            <option disabled selected>Seleccione el plan</option>
+            <option value="{{plan.codigo}}" *ngFor="let plan of data">{{plan.nombre}}</option>
+        </select>
+        <p>Monto Disponible por plan: {{montoPlan | currency}}</p>
+    </div>
+
+    <p [ngClass]="{red: saldoFinal < 0}">Saldo Final: {{saldoFinal | currency}}</p>
+    <button [ngClass]="{disable: saldoFinal <= 0}" (click)="pagar()" class="btn btn-success">Confirmar Pago</button>
+</div>

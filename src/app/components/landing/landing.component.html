@@ -1,0 +1,6 @@
+<app-navbar></app-navbar>
+
+
+<app-products-generics *ngIf="dataFtr && dataFtr.length === 0" (dataFilter)="capturarData($event)" (compra)="agregarCompra($event)" [data]="data" ></app-products-generics>
+
+<app-single-product *ngIf="dataFtr && dataFtr.length !== 0" [data]="dataFtr"></app-single-product>
