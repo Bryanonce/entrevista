@@ -17,4 +17,4 @@
     </div>
 </div>
 
-<app-total-pago-panel [data]="data"></app-total-pago-panel>
+<app-total-pago-panel *ngIf="renderizar" [data]="data" [totalPago]="totalPago"></app-total-pago-panel>
