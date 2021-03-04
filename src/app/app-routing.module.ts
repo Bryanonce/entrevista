@@ -10,7 +10,7 @@ import { SingleProductComponent } from './components/single-product/single-produ
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
-  {path: 'home', component:LandingComponent, canActivate: ['canActivateTeam']},
+  {path: 'home', component:LandingComponent},
   {path: 'producto/:id', component: SingleProductComponent},
   {path: 'carrito', component: CarritoComponent},
   {path: 'pasarela', component: PasarelaPagoComponent},
