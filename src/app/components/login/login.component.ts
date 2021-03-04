@@ -34,9 +34,8 @@ export class LoginComponent implements OnInit {
     }).subscribe((response: any) => {
       if (response.mensajeRetorno === 'consulta correcta') {
         localStorage.setItem('token', response.token)
-        console.log(response)
-        this.login.emit(true)
-        this._router.navigate(['/home'])
+        this.login.emit(true);
+        this._router.navigate(['/home']);
       }
 
     })
